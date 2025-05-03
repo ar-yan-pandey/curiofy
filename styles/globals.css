@@ -1,0 +1,45 @@
+:root {
+  --curiofy-green: #1db954;
+  --curiofy-bg: #181818;
+  --curiofy-bg-secondary: #232323;
+  --curiofy-text: #fff;
+  --curiofy-text-secondary: #b3b3b3;
+  --curiofy-border: #282828;
+}
+
+body {
+  background: var(--curiofy-bg);
+  color: var(--curiofy-text);
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  transition: background 0.2s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--curiofy-green);
+  text-decoration: none;
+}
+
+input, button, textarea, select {
+  font-family: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--curiofy-bg-secondary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--curiofy-border);
+  border-radius: 8px;
+}
+
+.grid {
+  display: grid;
+  gap: 2rem;
+}
