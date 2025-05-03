@@ -34,7 +34,7 @@ Password: 123456
      - `NEXT_PUBLIC_SUPABASE_URL`
      - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
      - `NEXT_PUBLIC_GEMINI_API_KEY`
-     - (Optional) `GOOGLE_TTS_KEY_PATH`, `STABILITY_API_KEY`
+     - (Optional) `GOOGLE_TTS_KEY_JSON`, `STABILITY_API_KEY`
 4. **Run the development server:**
    ```bash
    npm run dev
