@@ -22,15 +22,13 @@ export default async function handler(req, res) {
   const lang = languageCode || 'en-US';
   const voiceName = voice || 'en-US-Wavenet-F';
 
-  // Load credentials
-  const keyPath = process.env.GOOGLE_TTS_KEY_PATH || 'google-tts-key.json';
-  const keyFile = path.resolve(process.cwd(), keyPath);
-  if (!fs.existsSync(keyFile)) {
-    return res.status(500).json({ error: 'Google TTS key file not found' });
+  // Load credentials from env variable (JSON string)
+  const keyJson = process.env.GOOGLE_TTS_KEY_JSON;
+  if (!keyJson) {
+    return res.status(500).json({ error: 'Google TTS key JSON not found in environment variables' });
   }
-
   const auth = new GoogleAuth({
-    keyFile,
+    credentials: JSON.parse(keyJson),
     scopes: ['https://www.googleapis.com/auth/cloud-platform'],
   });
   const client = await auth.getClient();

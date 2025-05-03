@@ -30,7 +30,7 @@ Password: 123456
    npm install
    ```
 3. **Configure environment variables:**
-   - Copy `.env.example` to `.env.local` and fill in your keys:
+   - Copy `.env.example` to `.env` and fill in your keys:
      - `NEXT_PUBLIC_SUPABASE_URL`
      - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
      - `NEXT_PUBLIC_GEMINI_API_KEY`
@@ -50,7 +50,7 @@ Password: 123456
 - [react-markdown](https://github.com/remarkjs/react-markdown)
 
 ## Environment Files
-- `.env.local`: Main environment variables (see above)
+- `.env`: Main environment variables (see above)
 - `.env.example`: Template for required variables
 
 ## License
